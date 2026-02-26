@@ -2,6 +2,8 @@
 
 This document provides extended reference for the String Analyzer tool: workflows, pattern semantics, API details, and troubleshooting.
 
+**See also:** [Practical guide (Medium)](https://medium.com/@1200km/a-practical-guide-to-string-analyzer-extract-and-analyze-strings-from-binaries-without-the-875dc74e4868) — step-by-step usage and examples.
+
 ---
 
 ## 1. Typical workflows

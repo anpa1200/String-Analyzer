@@ -9,6 +9,8 @@
 - **Single entry point**: one CLI with batch and interactive modes.
 - **Library-friendly API**: use `analyze_file()` or lower-level functions in your own scripts.
 
+**📖 [Practical guide (Medium)](https://medium.com/@1200km/a-practical-guide-to-string-analyzer-extract-and-analyze-strings-from-binaries-without-the-875dc74e4868)** — step-by-step usage, workflows, and examples.
+
 ---
 
 ## Table of contents
@@ -307,7 +309,7 @@ pytest tests/ -v
 
 CI runs on push/PR: Ruff lint and pytest on Python 3.8, 3.10, and 3.12.
 
-For more detail on patterns, heuristics, and workflows, see [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md).
+**Documentation:** [Practical guide (Medium)](https://medium.com/@1200km/a-practical-guide-to-string-analyzer-extract-and-analyze-strings-from-binaries-without-the-875dc74e4868) · [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md) (patterns, heuristics, workflows)
 
 ---
 

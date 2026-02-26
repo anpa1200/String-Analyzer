@@ -41,6 +41,7 @@ string-analyzer = "string_analyzer.cli:run"
 
 [project.urls]
 Repository = "https://github.com/anpa1200/String-Analyzer-"
+Guide = "https://medium.com/@1200km/a-practical-guide-to-string-analyzer-extract-and-analyze-strings-from-binaries-without-the-875dc74e4868"
 
 [tool.setuptools.packages.find]
 where = ["."]
