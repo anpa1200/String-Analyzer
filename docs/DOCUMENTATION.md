@@ -105,7 +105,7 @@ All pattern lists and regexes live in `string_analyzer/patterns.py` (single sour
 - **Exit codes:** 0 = success, 1 = error (e.g. file not found, permission denied, write failure), 130 = interrupted (e.g. Ctrl+C).
 - **Paths:** File and output paths support `~` (home directory). The CLI resolves them before checking existence or writing.
 - **Interactive mode:** If no file argument is given (or `-i` is used), the program prompts for file path and output type. Input size is capped (e.g. 50 MB) in interactive mode to avoid accidental resource use.
-- **External AI (`--analyze-with gemini | codex`):** Builds the same categorized AI prompt, saves it to `-o`, and sends it to the chosen CLI via stdin. Requires `gemini`/`gemini-cli` or `codex` on PATH. Use `--ai-output PATH` to save the AI response. Timeout: 300 seconds.
+- **External AI (`--analyze-with gemini | codex`):** Runs the same analysis as for a filtered report, then builds the AI prompt (entropy + categorized strings), writes it to `-o`, and **pipes it into** the chosen CLI via stdin. The tool does not call cloud APIs; it only invokes the local CLI (`gemini`/`gemini-cli` or `codex exec -`), which handles authentication and the model. Use `--ai-output PATH` to save the AI’s reply. Timeout: 300 seconds. Requires [Gemini CLI](https://github.com/google-gemini/gemini-cli) or [Codex CLI](https://codex.com) on PATH.
 
 ---
 

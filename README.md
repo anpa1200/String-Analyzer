@@ -115,6 +115,17 @@ string-analyzer
 2. **Filtered** (default): categorized report with entropy, plus sections such as URLS, IPS, WINDOWS_API_COMMANDS, DLLS, OBFUSCATED, etc.
 3. **AI prompt** (`--ai-prompt`): same categories in a markdown prompt asking an AI to analyze behavior and functionality (e.g. for malware triage).
 
+### External AI analysis (`--analyze-with`)
+
+The **`--analyze-with`** option sends the categorized string report directly to an AI CLI so you get an analysis in one command instead of copying a prompt by hand.
+
+- **What it does:** After extracting and categorizing strings (URLs, IPs, APIs, DLLs, obfuscation, etc.), the tool builds the same markdown prompt used by `--ai-prompt`, writes it to the path given by **`-o`** (so you can keep or reuse it), then **pipes that prompt into** the chosen CLI. The AI’s reply is printed to the terminal; you can save it with **`--ai-output PATH`**.
+- **Values:** `gemini` — uses **gemini-cli** (looks for `gemini` or `gemini-cli` on your PATH). `codex` — uses **Codex CLI** (`codex exec -` with the prompt on stdin).
+- **Requirements:** You must have one of these installed and on your PATH: [Gemini CLI](https://github.com/google-gemini/gemini-cli) (e.g. `npm i -g @google/generative-ai-cli`) or [Codex CLI](https://codex.com). The tool does not call cloud APIs itself; it only invokes the local CLI, which handles authentication and the model.
+- **Example:**  
+  `string-analyzer suspect.exe --analyze-with gemini -o prompt.txt --ai-output analysis.md`  
+  This saves the prompt to `prompt.txt`, sends it to Gemini, and writes the AI’s analysis to `analysis.md`.
+
 ### Interactive mode
 
 Run `string-analyzer` with no file argument (or use `string-analyzer -i`). The tool will:

@@ -67,16 +67,18 @@ string-analyzer /path/to/suspicious.exe --ai-prompt -o prompt.md
 
 The prompt includes entropy, a “possibly packed/obfuscated” note when the heuristic fires, and all categorized sections.
 
-### 4. Send directly to Gemini or Codex
+### 4. Send directly to Gemini or Codex (`--analyze-with`)
 
-If you have **gemini-cli** or **codex** on your PATH, you can pipe the same prompt into them and get the analysis in one step:
+The **`--analyze-with`** flag runs the same analysis (categorized strings + entropy) but then **pipes the resulting prompt** into an AI CLI so you get the model’s assessment in one step — no copy-paste.
+
+- **What it does:** The tool builds the same markdown prompt as `--ai-prompt` (entropy, categories, “possibly packed” note), saves it to **`-o`** so you have a copy, then sends it to the chosen CLI via **stdin**. The AI’s reply is printed to the terminal; use **`--ai-output PATH`** to write it to a file.
+- **Options:** `--analyze-with gemini` uses **gemini-cli** (binary `gemini` or `gemini-cli` on PATH). `--analyze-with codex` uses **Codex CLI** (`codex exec -`). String Analyzer does not call any cloud API itself; it only invokes the local CLI, which handles auth and the model.
+- **Requirements:** Install [Gemini CLI](https://github.com/google-gemini/gemini-cli) or [Codex CLI](https://codex.com) and ensure the command is on your PATH. Timeout: 300 seconds.
 
 ```bash
 string-analyzer suspect.exe --analyze-with gemini -o prompt.txt --ai-output analysis.md
 string-analyzer suspect.exe --analyze-with codex --ai-output analysis.md
 ```
-
-The tool builds the categorized prompt, saves it to `-o` (optional), sends it to the chosen CLI via stdin, and prints the AI response. Use `--ai-output` to save that response to a file. Requires [Gemini CLI](https://github.com/google-gemini/gemini-cli) or [Codex CLI](https://codex.com) installed and configured.
 
 ---
 
