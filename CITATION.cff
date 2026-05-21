@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this project in research, reporting, or tooling, please cite it."
+title: "String Analyzer"
+authors:
+  - family-names: "Pautov"
+    given-names: "Andrey"
+    orcid: "[user: confirm or remove]"
+url: "https://github.com/anpa1200/String-Analyzer-"
+repository-code: "https://github.com/anpa1200/String-Analyzer-"
+license: "GPL-3.0"

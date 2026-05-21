@@ -1,5 +1,22 @@
 # String Analyzer
 
+String extraction for CTI and malware-analysis workflows: surface URLs, IPs, paths, registry keys, APIs, commands, encoded data, and analyst-ready prompts from binaries and memory artifacts.
+
+## CTI Use
+
+Use String Analyzer when a sample or dump needs fast indicator discovery before reverse engineering or sandboxing. The output is designed to feed IOC review, infrastructure pivoting, YARA/Sigma ideas, and ATT&CK-mapped analyst notes.
+
+## Defender Outputs
+
+| Output | Use |
+|---|---|
+| Categorized strings | IOC and behavior discovery |
+| URLs / IPs / emails | Pivot and enrichment leads |
+| Registry / paths / DLLs | Host behavior context |
+| API names | Capability triage |
+| Decoded candidates | Obfuscation review |
+| AI-ready prompt | Structured analyst follow-up |
+
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
