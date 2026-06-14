@@ -2,6 +2,8 @@
 Core analysis logic: entropy, string extraction, pattern detection, output generation.
 """
 
+from __future__ import annotations
+
 import base64
 import logging
 import re

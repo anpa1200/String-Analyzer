@@ -3,6 +3,8 @@ Command-line interface for String Analyzer.
 Single entry point: CLI with optional interactive mode.
 """
 
+from __future__ import annotations
+
 import argparse
 import logging
 import shutil
