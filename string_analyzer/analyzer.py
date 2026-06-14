@@ -3,8 +3,8 @@ Core analysis logic: entropy, string extraction, pattern detection, output gener
 """
 
 import base64
-import re
 import logging
+import re
 from math import log2
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Literal, Optional, Set
@@ -27,9 +27,9 @@ from string_analyzer.patterns import (
     OBFUSCATED_PATTERNS,
     POWERSHELL_COMMAND_LIST,
     REGISTRY_PATTERN,
-    SYSTEM_PATH_PATTERN,
     SUSPICIOUS_DOTNET_KEYWORDS,
     SUSPICIOUS_KEYWORDS,
+    SYSTEM_PATH_PATTERN,
     URL_OBFUSCATED_PATTERN,
     URL_PATTERN,
     WINDOWS_API_COMMANDS,

@@ -162,7 +162,7 @@ _SUSPICIOUS_SENSITIVE = [
     "virtualbox", "vbox", "debugger", "analysis", "sample", "hash", "checksum",
 ]
 SUSPICIOUS_KEYWORDS: FrozenSet[str] = frozenset(
-    (kw.lower() for kw in _SUSPICIOUS_BASE + _SUSPICIOUS_EXTRA + _SUSPICIOUS_SENSITIVE)
+    kw.lower() for kw in _SUSPICIOUS_BASE + _SUSPICIOUS_EXTRA + _SUSPICIOUS_SENSITIVE
 )
 
 SUSPICIOUS_DOTNET_KEYWORDS: List[str] = [

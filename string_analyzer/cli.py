@@ -19,7 +19,6 @@ from string_analyzer.analyzer import (
     generate_normal_output,
     is_likely_obfuscated,
 )
-from string_analyzer.patterns import ENTROPY_THRESHOLD, MIN_USEFUL_COUNT
 
 # Instruction sent to external AI (when using stdin + short prompt)
 EXTERNAL_AI_INSTRUCTION = (
