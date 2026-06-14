@@ -1,5 +1,11 @@
 # String Analyzer
 
+[![PyPI](https://img.shields.io/pypi/v/string-analyzer.svg)](https://pypi.org/project/string-analyzer/)
+[![Python](https://img.shields.io/pypi/pyversions/string-analyzer.svg)](https://pypi.org/project/string-analyzer/)
+[![CI](https://github.com/anpa1200/String-Analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/anpa1200/String-Analyzer/actions/workflows/ci.yml)
+[![Publish](https://github.com/anpa1200/String-Analyzer/actions/workflows/publish.yml/badge.svg)](https://github.com/anpa1200/String-Analyzer/actions/workflows/publish.yml)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+
 String extraction for CTI and malware-analysis workflows: surface URLs, IPs, paths, registry keys, APIs, commands, encoded data, and analyst-ready prompts from binaries and memory artifacts.
 
 ## CTI Use
@@ -16,9 +22,6 @@ Use String Analyzer when a sample or dump needs fast indicator discovery before 
 | API names | Capability triage |
 | Decoded candidates | Obfuscation review |
 | AI-ready prompt | Structured analyst follow-up |
-
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
 **String Analyzer** extracts and analyzes printable strings from binary files. It is designed for **malware analysts**, **reverse engineers**, and **forensics investigators** who need to quickly surface URLs, IPs, registry keys, API names, and other indicators from executables, memory dumps, or disk images—and optionally generate an AI-ready analysis prompt.
 
@@ -69,8 +72,17 @@ Use String Analyzer when a sample or dump needs fast indicator discovery before 
 
 **Requirements:** Python 3.8 or newer.
 
+### PyPI
+
 ```bash
-git clone https://github.com/anpa1200/String-Analyzer-.git && cd String-Analyzer-
+pip install string-analyzer
+string-analyzer --help
+```
+
+### From source
+
+```bash
+git clone https://github.com/anpa1200/String-Analyzer.git && cd String-Analyzer
 python3 -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -e .
