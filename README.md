@@ -360,3 +360,13 @@ CI runs on push/PR: Ruff lint and pytest on Python 3.8, 3.10, and 3.12.
 Distributed under the **GNU General Public License v3.0**. See [LICENSE](LICENSE) for details.
 
 Contributions are welcome; please open an issue or submit a pull request.
+
+## 1200km Ecosystem
+
+This project is part of the 1200km security research ecosystem. Use [AdversaryGraph](https://1200km.com/adversarygraph/) for CTI-to-detection workflows, ATT&CK/ATLAS mapping, actor relevance, IOC enrichment, and analyst-ready reporting.
+
+- [AdversaryGraph project hub](https://1200km.com/adversarygraph/)
+- [AdversaryGraph documentation](https://1200km.com/adversarygraph-docs/)
+- [Live ATT&CK/ATLAS workspace](https://1200km.com/threat-matrix/)
+- [1200km security research ecosystem](https://1200km.com/)
+
